@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles_edit.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <!--log in page-->
+        <div id="loginpage">
+            <form id="login">
+            <input type="email" name="email" id="email" placeholder="example@example.com" autofocus></input>
+            <input type="password" name="password" id="password" placeholder="password"></input>
+            <button id="submit">Log In</button>
+            </form>
+        </div>
+
+    <!--editable page-->
+    <body id="editable" >
+        <header id="home">
+            <nav id="navbar" style="visibility:hidden">
+                <div style="position: fixed;top:10px;left:40px;" ><img style="border-radius: 50%;" src="favicon-32x32.png"></div>
+                <span><a href="#home">Home</a></span>
+                <span><a href="#about">About</a></span>
+                <span><a href="#education">Education</a></span>
+                <span><a href="#organization">Organization</a></span>
+                <span><a href="#works">Works</a></span>
+                <span><a href="#lifeverse">Life Verse</a></span>
+                <span><a href="#contact">Contact</a></span>
+            </nav>
+            <div id="container1">
+                 <div id="imagelogo">
+                     <img src="green.jpg" class="dp"></img>
+                 </div>
+                 <div id="welcome"></div>
+                 <div id="briefdesc"></div>
+            </id>
+        </header>
+        <section id="about">
+            <div id="container2">
+                <div id="introduction">
+                    <span style="font-size:30px;font-weight:bold">About me       
+                    <button id="editIntro" class="fa fa-edit" style="border-radius: 25%;border-color:grey;font-size:20px"></button><br><br>
+                    <div id="divEdit" class="hideform" style="position:absolute;">
+                        <textarea id="editInfo" ></textarea>
+                        <button id="saveIntro">Save</button>
+                    </div>
+                    <div id="textIntro" style="font:Cinzel;font-size:25px;font-weight: normal;">
+                    </div>
+                   
+                    </span>
+                </div>
+                <div id="skills">
+                    <span id="c" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>
+                        <div class="bar">
+                        <div id="cskill">80%</div>
+                        </div>
+                    <span id="htmlcss"  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>
+                        <div class="bar">
+                        <div id="hskill">70%</div>
+                        </div>
+                    <span id="js"  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>
+                        <div class="bar">
+                        <div id="jsskill">65%</div>
+                        </div>
+                    <span id="jq"  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>
+                        <div class="bar">
+                        <div id="jqskill">60%</div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+           <div id="container3">
+                <div id="titleEDU">EDUCATION    <button type="button" id="addedu">+</button>
+                    <div id="popupedu" class="hideform">
+                        <form id="eduform" style="text-align: left">
+                            School:<br>
+                            <input type="text" id="school" placeholder="School">
+                            <br><br>
+                            Degree:<br>
+                            <input type="text" id="degree" placeholder="Degree">
+                            <br><br>
+                            Year Start:<br>
+                            <input type="number" id="year_start" placeholder="e.g. 2020">
+                            <br><br>
+                            Year End:<br>
+                            <input type="number" id="year_end" placeholder="e.g. 2020">
+                            <br><br><br>
+                            <input type="submit" value="Add">
+                        </form>
+                    </div>
+                </div>
+                <div id="edu">
+                    <ul id="edu-list"></ul>
+                </div>
+           </div>
+        </section>
+        <section id="organization">
+            <div id="container4">
+                <div id="titleORG">ORGANIZATION     <button type="button" id="addorg">+</button>
+                    <div id="popuporg" class="hideform">
+                        <form id="orgform"  style="text-align: left">
+                            Name:<br>
+                            <input type="text" id="name" placeholder="Name">
+                            <br><br>
+                            Position:<br>
+                            <input type="text" id="position" placeholder="Position">
+                            <br><br>
+                            Year Start:<br>
+                            <input type="number" id="year_start" placeholder="e.g. 2020">
+                            <br><br>
+                            Year End:<br>
+                            <input type="number" id="year_end" placeholder="e.g. 2020">
+                            <br><br><br>
+                            <input type="submit" value="Add">
+                        </form>
+                    </div>
+                </div>
+                <div id="org">
+                    <ul id="org-list"></button></ul>
+                </div>
+           </div>
+        </section>
+        <section id="works">
+            <div id="container5">
+                <div id="titleWORK">WORKS   <button type="button" id="addwork">+</button>
+                    <div id="popupwork" class="hideform">
+                        <form id="workform" style="text-align: left">
+                            Name:<br>
+                            <input type="text" id="name" placeholder="Name">
+                            <br><br>
+                            Creator:<br>
+                            <input type="text" id="creator" placeholder="Creator">
+                            <br><br>
+                            Year Start:<br>
+                            <input type="number" id="year_start" placeholder="e.g. 2020">
+                            <br><br>
+                            Link(URL):<br>
+                            <input type="text" id="link" placeholder="https://example.com">
+                            <br><br><br>
+                            <input type="submit" value="Add">
+                        </form>
+                    </div>
+                </div>
+                <div id="work">
+                    <ul id="work-list"></ul>
+                </div>
+           </div>
+        </section>
+        <section id="lifeverse">
+            <div id="verse">
+                “For I know the plans I have for you,” declares the Lord, 
+                “plans to prosper you and not to harm you, plans to give
+                you hope and a future.”
+                </div>
+            <div id="chapter">Jeremiah 29:11</div>
+        </section>
+        <section id="contact">
+            <div id="titleCONTACT">CONTACT ME @:
+            <button id="editcontact" class="fa fa-edit" style="border-radius: 25%;border-color:grey;color:rgb(49, 49, 49);font-size: 24px;"></button>
+            <div id="popupcontact" class="hideform">
+                <form id="contactform">
+                    Github:<br>
+                    <input type="text" id="githubField" placeholder="https://example.com">
+                    <br><br>
+                    LinkedIn:<br>
+                    <input type="text" id="linkedinField" placeholder="https://example.com">
+                    <br><br>
+                    Twitter:<br>
+                    <input type="text" id="twitterField" placeholder="https://example.com">
+                    <br><br>
+                    Facebook:<br>
+                    <input type="text" id="facebookField" placeholder="https://example.com">
+                    <br><br><br>
+                    <input type="submit" value="Save" style="color: black;width:150px;">
+                </form>
+              </div>
+            </div>
+            <div id="contact-list">
+            </div>
+        </section>
+        <footer>
+        <a href="#home" class="fa" style="font-size: 60px">
+            <text id="button_top">&#xf139;</text>
+            </a>
+        </footer>
+
+        <script>
+            $('#editIntro').on('click', function () {
+                $('#divEdit').fadeToggle(500);
+            });
+            $('#addedu').on('click', function () {
+                $('#popupedu').slideToggle(600);
+                
+            });   
+          
+            $('#addorg').on('click', function () {
+                $('#popuporg').slideToggle(600);
+            });     
+   
+            $('#addwork').on('click', function () {
+                $('#popupwork').slideToggle(600);
+            });       
+            
+            $('#editcontact').on('click', function () {
+                $('#popupcontact').slideToggle(600);
+            });
+        </script>
+
+       
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="getdata_edit.js"></script>
+   
+   <script>
+        // Initialize Firebase
+        var db= firebase.firestore();
+        const auth =firebase.auth();
+        const loginForm = document.querySelector("#login");
+        loginForm.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            const email=loginForm['email'].value;
+            const password=loginForm['password'].value;
+        auth.signInWithEmailAndPassword(email, password).then(cred =>{
+                var x = document.getElementById("loginpage");
+                var y= document.getElementById("editable");
+                var z=document.getElementById("navbar");
+                x.style.display = "none";
+                y.style.display= "initial";
+                z.style.visibility = "visible";
+                window.scrollTo(0,0);   
+
+                //sticky nav bar
+                    $(document).ready(function(){
+                    $(window).scroll(function(){
+                      var scroll = $(window).scrollTop();
+                    if (scroll > 493) {
+                    $("#navbar").css( "background-color","#2F4F4F");
+                    }
+                    else{
+                      $("#navbar").css("background" , "none");  	
+                    }
+                    });
+               
+            });
+        }).catch(err =>{
+            console.log(err);
+            alert("Stay Away Hacker :(");
+        });
+        });
+       
+       
+        var eduform=document.getElementById("eduform");
+        var orgform=document.getElementById("orgform");
+        var workform=document.getElementById("workform");
+        var editInfo=document.getElementById("editInfo"); 
+        var contactform=document.getElementById("contactform");
+
+        //update data from db(intro)
+        saveIntro.addEventListener('click', (e) => {
+            e.preventDefault();
+            db.collection('others').doc('intro').update({
+                introduction: editInfo.value
+            });
+            alert("Info Updated :)");
+        });
+
+        //update data from db(contact)
+        contactform.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log(contactform.value)
+            db.collection('contacts').doc('link').update({
+                facebook: contactform.facebookField.value,
+                twitter: contactform.twitterField.value,
+                github: contactform.githubField.value,
+                linkedin: contactform.linkedinField.value
+            });
+            alert("Info Updated :)");
+        });
+
+        //add data to db
+        eduform.addEventListener('submit', (e) => {
+        e.preventDefault();
+        db.collection('education').add({
+        Degree: eduform.degree.value,
+        School: eduform.school.value,
+        year_end: Number(eduform.year_end.value),
+        year_start: Number(eduform.year_start.value)
+        });
+        eduform.reset();
+        alert("Education added :)");
+        });
+
+        orgform.addEventListener('submit', (e) => {
+        e.preventDefault();
+        db.collection('organizations').add({
+        name: orgform.name.value,
+        position: orgform.position.value,
+        year_end: Number(orgform.year_end.value),
+        year_start: Number(orgform.year_start.value)
+        });
+        orgform.reset();
+        alert("Organization added :)");
+        });
+
+        workform.addEventListener('submit', (e) => {
+        e.preventDefault();
+        db.collection('works').add({
+        name: workform.name.value,
+        creator: workform.creator.value,
+        link: workform.link.value,
+        year_start: Number(workform.year_start.value)
+        });
+        workform.reset();
+        alert("Work added :)");
+        });
+
+
+
+    </script>
+
+    </body>
+
+
+</html>

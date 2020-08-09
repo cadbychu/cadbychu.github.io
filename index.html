@@ -1,0 +1,115 @@
+<!DOCTYPE html> 
+<html lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <body> 
+        <header id="home">
+            <nav id="navbar">
+                <div style="position: fixed;top:10px;left:40px;" ><img style="border-radius: 50%;" src="favicon-32x32.png"></div>
+                <span><a href="#home">Home</a></span>
+                <span><a href="#about">About</a></span>
+                <span><a href="#education">Education</a></span>
+                <span><a href="#organization">Organization</a></span>
+                <span><a href="#works">Works</a></span>
+                <span><a href="#lifeverse">Life Verse</a></span>
+                <span><a href="#contact">Contact</a></span>
+            </nav>
+            <div id="container1">
+                 <div id="imagelogo">
+                     <img src="green.jpg" class="dp"></img>
+                 </div>
+                 <div id="welcome"></div>
+                 <div id="briefdesc"></div>
+            </id>
+        </header>
+        <section id="about">
+            <div id="container2">
+                <div id="introduction"><span style="font-size:30px;font-weight:bold">About me<br><br></span></div>
+                <div id="skills">
+                    <span id="c" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>
+                        <div class="bar">
+                        <div id="cskill">80%</div>
+                        </div>
+                    <span id="htmlcss"  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>
+                        <div class="bar">
+                        <div id="hskill">70%</div>
+                        </div>
+                    <span id="js"  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>
+                        <div class="bar">
+                        <div id="jsskill">65%</div>
+                        </div>
+                    <span id="jq"  style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"></span>
+                        <div class="bar">
+                        <div id="jqskill">60%</div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="education">
+           <div id="container3">
+                <div id="titleEDU">EDUCATION</div>
+                <div id="edu">
+                    <ul id="edu-list"></ul>
+                </div>
+           </div>
+        </section>
+        <section id="organization">
+            <div id="container4">
+                <div id="titleORG">ORGANIZATION</div>
+                <div id="org">
+                    <ul id="org-list"></ul>
+                </div>
+           </div>
+        </section>
+        <section id="works">
+            <div id="container5">
+                <div id="titleWORK">WORKS</div>
+                <div id="work">
+                    <ul id="work-list"></ul>
+                </div>
+           </div>
+        </section>
+        <section id="lifeverse">
+            <div id="verse">
+                “For I know the plans I have for you,” declares the Lord, 
+                “plans to prosper you and not to harm you, plans to give
+                you hope and a future.”
+                </div>
+            <div id="chapter">Jeremiah 29:11</div>
+        </section>
+        <section id="contact">
+            <div id="titleCONTACT">CONTACT ME @:</div>
+            <div id="contact-list">
+            </div>
+        </section>
+        <footer>
+        <a href="#home" class="fa" style="font-size: 60px">
+            <text id="button_top">&#xf139;</text>
+            </a>
+        </footer>
+       
+        <script>
+        //sticky nav bar
+        $(document).ready(function(){
+         
+            $(window).scroll(function(){
+              var scroll = $(window).scrollTop();
+            if (scroll > 493) {
+            $("#navbar").css( "background-color","#2F4F4F");
+            }
+            else{
+              $("#navbar").css("background" , "none");  	
+            }
+            });
+            });
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+        <script src="getdata.js"></script>
+    </body>
+</html>

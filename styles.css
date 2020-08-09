@@ -1,0 +1,328 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    margin: 0px;
+    font-family:'Cinzel';
+    top:0px;
+    left:0px;
+}
+li{
+    padding-bottom:30px;
+    border-bottom: 1px solid rgb(75, 74, 74);
+}
+a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.6s ease;
+}
+#home{
+    height: 500px;
+    background-image: url(try.png);
+    background-repeat: no-repeat;
+    background-size: 100% 570px;
+}
+#about{
+    background-color:rgba(204, 175, 112, 0.925);
+    background-image: linear-gradient(rgba(99, 81, 44, 0.925),rgba(207, 184, 140, 0.925));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding:20px;
+}
+#education{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:50px;
+}
+#organization{
+    background-color:  beige;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:50px;
+}
+#works{
+    background-color:  #eaeaea;
+    background-image: linear-gradient(#eaeaea,#777575);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding:50px;
+}
+#lifeverse{
+    height: 500px;
+    background-image: url(bwbible.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding:20px;
+}
+#contact{
+    background-color: rgba(0, 0, 0, 0.918);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#navbar{
+    position: fixed;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 12px;
+}
+#navbar span{
+    display: inline-block;
+    letter-spacing: 2.5px;
+    padding-top: 17px;
+    padding-left:15px;
+    padding-right:15px;  
+    padding-bottom: 17px;   
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 12px;
+}
+a:hover{
+    color: rgb(253, 149, 63);
+    transition: all 0.6s ease;
+}
+#container1{
+    display:grid;
+    grid-template-rows: 280px 1fr 1fr;
+}
+.dp{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+}
+#imagelogo{
+    grid-row: 1/2;
+    text-align: center;
+    padding-top: 130px;
+    padding-right: 10px;
+}
+#welcome{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    padding-top:45px;
+    font-family:"Courier New", Courier, monospace;
+}
+#briefdesc{
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    padding-top:10px;
+    font-family:"Courier New", Courier, monospace;
+}
+#container2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#introduction{
+    font-size: 25px;
+    padding: 100px;
+    padding-left: 50px;
+    text-align: justify;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#skills{
+    display:flex;
+    flex-direction:column;
+    font-size: 17px;
+    font-weight: bold;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+#cskill{
+    text-align: right;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: white;
+    width: 80%;
+    height: 30px;
+    background-color: #294646;
+}
+#hskill{
+    text-align: right;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: white;
+    width: 70%;
+    height: 30px;
+    background-color: #294646;
+}
+#jsskill{
+    text-align: right;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: white;
+    width: 65%;
+    height: 30px;
+    background-color: #294646;
+}
+#jqskill{
+    text-align: right;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: white;
+    width: 60%;
+    height: 30px;
+    background-color: #294646;
+}
+.bar{
+    width: 100%;
+    height: 30px;
+    background-color: #ddd;
+}
+#container3{
+    display:grid;
+    grid-template-columns: 350px 1fr;
+    padding:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#titleEDU{
+    box-sizing: border-box;
+    padding:30px;
+    text-align:center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'opensans-bold', sans-serif;
+    text-decoration-line: underline;
+    text-decoration-color: #6cc08d ;
+}
+#edu-list{
+    text-align: center;
+    list-style-type: none;
+    font-size: 20px;
+}
+#edu-list span{
+    display:table;
+}
+#container4{
+    display:grid;
+    grid-template-columns: 350px 1fr;
+    padding:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#titleORG{
+    box-sizing: border-box;
+    padding:30px;
+    text-align:center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'opensans-bold', sans-serif;
+    text-decoration-line: underline;
+    text-decoration-color: #6cc08d ;
+}
+#org-list{
+    text-align: center;
+    list-style-type: none;
+    font-size: 20px;
+}
+#org-list span{
+    display:table;
+}
+#container5{
+    display:grid;
+    grid-template-columns: 350px 1fr;
+    padding:20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#titleWORK{
+    box-sizing: border-box;
+    padding:30px;
+    text-align:center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'opensans-bold', sans-serif;
+    text-decoration-line: underline;
+    text-decoration-color: #6cc08d ;
+}
+#work-list{
+    text-align: center;
+    list-style-type: none;
+    font-size: 20px;
+}
+#work-list span{
+    display:table;
+}
+#work-list a{
+    color:#193131;
+    font-size: 15px;
+}
+#work-list a:hover{
+    color:#2b5858;
+    font-size: 18px;
+}
+#contact-list{
+    text-align: center;
+    list-style-type: none;
+}
+#contact-list a{
+    padding: 50px;
+    transition:all 0.6 ease;
+}
+#contact-list a img:hover{
+    transition:all 0.6 ease;
+    opacity: 0.400;
+    width:32px;
+    height: 32px;
+}
+#titleCONTACT{
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+#verse{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:45px;
+    box-sizing: border-box;
+    padding: 60px;
+    text-align: center;
+    color: white;
+    text-shadow: 0 3px 0 black;
+}
+#chapter{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:65px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 0 3px 0 black;
+}
+p{
+    font-size:50px;
+}
+footer{
+    background-color: rgba(0, 0, 0, 0.918);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+}
+#button_top{
+    font-size: 58px;
+    color:#2F4F4F;
+    transition: all 0.4s ease;
+}
+#button_top:hover{
+    font-size:60px;
+    transition: all 0.4s ease;
+    color:blanchedalmond;
+}

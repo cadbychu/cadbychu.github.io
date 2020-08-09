@@ -1,0 +1,157 @@
+#editable{
+    width: 100%;
+    margin: 0px;
+    font-family:'Cinzel';
+    top:0px;
+    left:0px;
+    color:black;
+}
+#navbar{
+    position: fixed;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 12px;
+}
+#navbar span{
+    display: inline-block;
+    letter-spacing: 2.5px;
+    padding-top: 17px;
+    padding-left:15px;
+    padding-right:15px;  
+    padding-bottom: 17px;   
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 12px;
+    cursor:pointer;
+}
+#navbar span a{
+    text-decoration: none;
+    color: white;
+}
+#navbar span a:hover{
+    color: rgb(253, 149, 63);
+    transition: all 0.6s ease;
+}
+#loginpage{
+    width:100%;
+    height:100%;
+    top: 0px;
+    left: 0px;
+    background-image: url("https://i.redd.it/bmftmmydirfx.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: -100px 50px;
+    background-color: black;
+    position: fixed;
+}
+#login{
+    height: 200px;
+    width: 400px;
+    border: 2px solid rgb(155, 0, 0);
+    background-color: rgb(117, 116, 116);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -110px;
+    margin-left: 50px;
+    padding:20px;
+}
+#email{
+    width: 230px;
+}
+#password{
+    width: 230px;
+}
+#submit{
+    width: 100px;
+}
+#popupedu {
+    margin: auto;
+    width: 100%;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);
+    font-size: 15px;
+    text-decoration: none;
+}
+#popuporg {
+    margin: auto;
+    width: 100%;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);
+    font-size: 15px;
+    text-decoration: none;
+}
+#popupwork {
+    margin: auto;
+    width: 100%;
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(14, 13, 13, 0.19);
+    font-size: 15px;
+    text-decoration: none;
+}
+.hideform {
+    display: none;
+}
+button{
+    border-radius: 45%;
+    border-color: #ec2828;
+    background-color: #f5f5f5;
+}
+li a{
+    font-size:20px;
+}
+#addedu{
+    border-color:rgb(87, 236, 87);
+    font-size: 18px;
+}
+#addorg{
+    border-color:rgb(0, 255, 0);
+    font-size: 18px;
+}
+#addwork{
+    border-color:rgb(0, 255, 0);
+    font-size: 18px;
+}
+#submit{
+    border-radius: 40% ;
+    background-color:#ffffff;
+    font-weight: normal;
+}
+input{
+    font-weight: lighter;
+}
+textarea{
+    display: block;
+}
+#editInfo{
+    margin:0px;
+    width:490px;
+    height:340px;
+    font-size:25px;
+    font-weight:normal;
+}
+#saveIntro{
+    position: absolute;
+    bottom:10px;
+    right:10px;
+    border-color: black;
+    background-color: rgb(174, 177, 179);
+    border-radius:0%;
+    font-size:20px;
+    font-weight:normal;
+}
+#contactform{
+      font-size:17px;
+    text-align: center;
+    padding: 15px;
+}
+#contactform input{
+    width: 450px;
+    color:black;
+    
+}
