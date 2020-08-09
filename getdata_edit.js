@@ -1,6 +1,6 @@
-    
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
+            // Initialize Firebase
+              // Your web app's Firebase configuration
+            var firebaseConfig = {
             apiKey: "AIzaSyCNy4SfH4DnOqVd8oUrJu_-nreG8NhGPf0",
             authDomain: "resume-d3f10.firebaseapp.com",
             databaseURL: "https://resume-d3f10.firebaseio.com",
@@ -13,7 +13,125 @@
             // Initialize Firebase
             var defaultProject = firebase.initializeApp(firebaseConfig);
             var db= firebase.firestore();
+            const auth =firebase.auth();
+            const loginForm = document.querySelector("#login");
+            loginForm.addEventListener('submit', (e) =>{
+                e.preventDefault();
+                const email=loginForm['email'].value;
+                const password=loginForm['password'].value;
+            auth.signInWithEmailAndPassword(email, password).then(cred =>{
+                    var x = document.getElementById("loginpage");
+                    var y= document.getElementById("editable");
+                    var z=document.getElementById("navbar");
+                    x.style.display = "none";
+                    y.style.display= "initial";
+                    z.style.visibility = "visible";
+                    window.scrollTo(0,0);   
             
+                    //sticky nav bar
+                        $(document).ready(function(){
+                        $(window).scroll(function(){
+                          var scroll = $(window).scrollTop();
+                        if (scroll > 493) {
+                        $("#navbar").css( "background-color","#2F4F4F");
+                        }
+                        else{
+                          $("#navbar").css("background" , "none");  	
+                        }
+                        });
+                    
+                });
+            }).catch(err =>{
+                console.log(err);
+                alert("Stay Away Hacker :(");
+            });
+            });
+            $('#editIntro').on('click', function () {
+                $('#divEdit').fadeToggle(500);
+            });
+            $('#addedu').on('click', function () {
+                $('#popupedu').slideToggle(600);
+
+            });   
+
+            $('#addorg').on('click', function () {
+                $('#popuporg').slideToggle(600);
+            });     
+
+            $('#addwork').on('click', function () {
+                $('#popupwork').slideToggle(600);
+            });       
+
+            $('#editcontact').on('click', function () {
+                $('#popupcontact').slideToggle(600);
+            });
+        
+        
+            var eduform=document.getElementById("eduform");
+            var orgform=document.getElementById("orgform");
+            var workform=document.getElementById("workform");
+            var editInfo=document.getElementById("editInfo"); 
+            var contactform=document.getElementById("contactform");
+
+            //update data from db(intro)
+            saveIntro.addEventListener('click', (e) => {
+                e.preventDefault();
+                db.collection('others').doc('intro').update({
+                    introduction: editInfo.value
+                });
+                alert("Info Updated :)");
+            });
+
+            //update data from db(contact)
+            contactform.addEventListener('submit', (e) => {
+                e.preventDefault();
+                console.log(contactform.value)
+                db.collection('contacts').doc('link').update({
+                    facebook: contactform.facebookField.value,
+                    twitter: contactform.twitterField.value,
+                    github: contactform.githubField.value,
+                    linkedin: contactform.linkedinField.value
+                });
+                alert("Info Updated :)");
+            });
+
+            //add data to db
+            eduform.addEventListener('submit', (e) => {
+            e.preventDefault();
+            db.collection('education').add({
+            Degree: eduform.degree.value,
+            School: eduform.school.value,
+            year_end: Number(eduform.year_end.value),
+            year_start: Number(eduform.year_start.value)
+            });
+            eduform.reset();
+            alert("Education added :)");
+            });
+
+            orgform.addEventListener('submit', (e) => {
+            e.preventDefault();
+            db.collection('organizations').add({
+            name: orgform.name.value,
+            position: orgform.position.value,
+            year_end: Number(orgform.year_end.value),
+            year_start: Number(orgform.year_start.value)
+            });
+            orgform.reset();
+            alert("Organization added :)");
+            });
+
+            workform.addEventListener('submit', (e) => {
+            e.preventDefault();
+            db.collection('works').add({
+            name: workform.name.value,
+            creator: workform.creator.value,
+            link: workform.link.value,
+            year_start: Number(workform.year_start.value)
+            });
+            workform.reset();
+            alert("Work added :)");
+            });
+
             //get "others" data 
             function getOther(doc){
                 if(doc.data().welcome != undefined)

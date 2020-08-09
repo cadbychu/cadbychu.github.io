@@ -14,6 +14,18 @@
         var defaultProject = firebase.initializeApp(firebaseConfig);
         var db= firebase.firestore();
         
+        $(document).ready(function(){
+         
+            $(window).scroll(function(){
+              var scroll = $(window).scrollTop();
+            if (scroll > 493) {
+            $("#navbar").css( "background-color","#2F4F4F");
+            }
+            else{
+              $("#navbar").css("background" , "none");  	
+            }
+            });
+            });
         //get "others" data 
         db.collection("others").get().then(function(snapshot){
             snapshot.forEach(function(doc){
